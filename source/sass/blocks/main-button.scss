@@ -1,0 +1,26 @@
+.main-button {
+  position: relative;
+  font-family: $ff-inter-medium;
+  font-size: size(18px);
+  font-weight: 500;
+  line-height: size(22px);
+  color: $color-default-white;
+  padding: size(16px) size(60px) size(16px) size(24px);
+  border-radius: size(50px);
+  background: linear-gradient($color-jungle-green, $color-emerald, $color-pastel-green);
+  border: none;
+
+  &::after {
+    content: "";
+    background-image: url("../img/svg/button.svg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: size(26px);
+    height: size(26px);
+    position: absolute;
+    right: size(24px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

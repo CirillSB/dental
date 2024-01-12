@@ -464,6 +464,35 @@ template {
   src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
 }
 
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?66o5ze");
+  src: url("../fonts/icomoon.eot?66o5ze#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?66o5ze") format("truetype"), url("../fonts/icomoon.woff?66o5ze") format("woff"), url("../fonts/icomoon.svg?66o5ze#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^=icon-font-],
+[class*=" icon-font-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-font-button:before {
+  content: "\e900";
+  color: #fff;
+}
+
 *,
 *::before,
 *::after {
@@ -1449,7 +1478,7 @@ button,
   position: absolute;
   left: 2.7777777778vw;
   right: 2.7777777778vw;
-  bottom: -0.8333333333vw;
+  bottom: -2.7777777778vw;
   border: 1.3888888889vw;
   background-color: rgba(255, 255, 255, 0.7);
   display: -webkit-box;
@@ -1486,6 +1515,16 @@ button,
   margin: 0;
 }
 
+.navigation__link {
+  font-family: "Inter-Regular", "Arial", sans-serif;
+  font-size: 1.1111111111vw;
+  font-weight: 400;
+  line-height: 1.3194444444vw;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.6;
+}
+
 .navigation__social-list {
   margin: 0;
   padding: 0;
@@ -1516,6 +1555,185 @@ button,
 
 .navigation__social-item:first-child {
   margin: 0;
+}
+
+.main-button {
+  position: relative;
+  font-family: "Inter-Medium", "Arial", sans-serif;
+  font-size: 1.25vw;
+  font-weight: 500;
+  line-height: 1.5277777778vw;
+  color: #ffffff;
+  padding: 1.1111111111vw 4.1666666667vw 1.1111111111vw 1.6666666667vw;
+  border-radius: 3.4722222222vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2cb570), color-stop(#43c56f), to(#43e040));
+  background: linear-gradient(#2cb570, #43c56f, #43e040);
+  border: none;
+}
+
+.main-button::after {
+  content: "";
+  background-image: url("../img/svg/button.svg");
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.8055555556vw;
+  height: 1.8055555556vw;
+  position: absolute;
+  right: 1.6666666667vw;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.promo {
+  padding: 0 1.7361111111vw 1.5972222222vw;
+}
+
+.promo__inner {
+  background-image: url("../img/promo-desktop@1x-min.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.promo__content-wrapper {
+  width: 39.5833333333vw;
+  padding-left: 2.5694444444vw;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 12.3611111111vw 0 1.3888888889vw 0;
+  font-family: "Raleway-Medium", "Arial", sans-serif;
+  font-size: 3.6805555556vw;
+  font-weight: 500;
+  line-height: 4.3055555556vw;
+  color: #122c19;
+}
+
+.promo__title::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.2083333333vw;
+  background-color: #73c83f;
+}
+
+.promo__title--small {
+  font-family: "Inter-Regular", "Arial", sans-serif;
+  font-size: 1.1111111111vw;
+  font-weight: 400;
+  line-height: 1.3194444444vw;
+  letter-spacing: 0px;
+  color: #275d36;
+  display: inline-block;
+  margin-bottom: 0.8333333333vw;
+}
+
+.promo__descriptions-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50%)[2];
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: 2.7777777778vw;
+  margin-bottom: 4.1666666667vw;
+}
+
+.promo__descriptions {
+  margin: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+  grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[2];
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: 0.8333333333vw;
+}
+
+.promo__descriptions::before {
+  content: "";
+  display: inline-block;
+  width: 3.125vw;
+  height: 3.125vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: 95% 95%;
+  -ms-grid-row-span: 2;
+  grid-row: span 2;
+}
+
+.promo__descriptions--prevention::before {
+  background-image: url("../img/svg/prevention.svg");
+}
+
+.promo__descriptions--comprehensive::before {
+  background-image: url("../img/svg/comprehensive.svg");
+}
+
+.promo__descriptions-title {
+  font-family: "Raleway-SemiBold", "Arial", sans-serif;
+  font-size: 1.1111111111vw;
+  font-weight: 600;
+  line-height: 1.3194444444vw;
+  color: #337b47;
+  margin-bottom: 0.8333333333vw;
+}
+
+.promo__descriptions-text {
+  font-family: "Inter-Regular", "Arial", sans-serif;
+  font-size: 0.9027777778vw;
+  font-weight: 400;
+  line-height: 1.1111111111vw;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+.promo__make-appointment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.promo__call-link {
+  display: inline-block;
+  margin-right: 11.5972222222vw;
+  background-image: url("../img/svg/make-appointment.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: -0.9027777778vw -0.9027777778vw;
+  min-height: 4.0972222222vw;
+}
+
+.promo__call-link::after {
+  position: relative;
+  display: inline-block;
+  top: 0;
+  left: 5.4861111111vw;
+  content: "";
+  background-image: url("../img/svg/stom.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 6.3194444444vw;
+  height: 5.7638888889vw;
+}
+
+.promo__link-text {
+  font-family: "Raleway-Medium", "Arial", sans-serif;
+  font-size: 0.8333333333vw;
+  font-weight: 500;
+  line-height: 0.8333333333vw;
+  letter-spacing: 0px;
+  text-align: center;
+  color: red;
 }
 
 /* @mixin hover-focus {

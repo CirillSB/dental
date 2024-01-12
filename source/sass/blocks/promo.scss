@@ -1,0 +1,141 @@
+.promo {
+
+  padding: 0 size(25px) size(23px);
+}
+
+.promo__inner {
+  background-image: url("../img/promo-desktop@1x-min.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.promo__content-wrapper {
+  width: size(570px);
+  padding-left: size(37px);
+}
+
+.promo__title {
+  margin: 0;
+  padding: size(178px) 0 size(20px) 0;
+  font-family: $ff-raleway;
+  font-size: size(53px);
+  font-weight: 500;
+  line-height: size(62px);
+  color: $color-celtic;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: size(3px);
+    background-color: $color-sushi;
+  }
+}
+
+.promo__title--small {
+  font-family: $ff-inter;
+  font-size: size(16px);
+  font-weight: 400;
+  line-height: size(19px);
+  letter-spacing: 0px;
+  color: $color-everglade;
+  display: inline-block;
+  margin-bottom: size(12px);
+}
+
+.promo__descriptions-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-gap: size(40px);
+  margin-bottom: size(60px);
+}
+
+.promo__descriptions {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-column-gap: size(12px);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: size(45px);
+    height: size(45px);
+    background-color: $color-white-light;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 95% 95%;
+    grid-row: span 2;
+  }
+
+  &--prevention {
+    &::before {
+      background-image: url("../img/svg/prevention.svg");
+    }
+  }
+
+  &--comprehensive {
+    &::before {
+      background-image: url("../img/svg/comprehensive.svg");
+    }
+  }
+}
+
+.promo__descriptions-title {
+  font-family: $ff-raleway-semiBold;
+  font-size: size(16px);
+  font-weight: 600;
+  line-height: size(19px);
+  color: $color-goblin;
+  margin-bottom: size(12px);
+}
+
+.promo__descriptions-text {
+  font-family: $ff-inter;
+  font-size: size(13px);
+  font-weight: 400;
+  line-height: size(16px);
+  color: $color-black-light;
+  margin: 0;
+}
+
+.promo__make-appointment {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100%;
+}
+
+.promo__call-link {
+  display: inline-block;
+  margin-right: size(167px);
+  background-image: url("../img/svg/make-appointment.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: size(-13px) size(-13px);
+  min-height: size(59px);
+
+  &::after {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: size(79px);
+    content: "";
+    background-image: url("../img/svg/stom.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: size(91px);
+    height: size(83px);
+  }
+}
+
+.promo__link-text {
+  font-family: $ff-raleway;
+  font-size: size(12px);
+  font-weight: 500;
+  line-height: size(12px);
+  letter-spacing: 0px;
+  text-align: center;
+  color: red;
+}
